@@ -26,8 +26,8 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 //Routing midlleware
-app.use("/users", userRouter);
-app.use("/protect", router);
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/protect", router);
 
 const PORT = process.env.PORT || 7000;
 
@@ -35,4 +35,6 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}.....`);
 });
 
-
+app.get("/", (req, res) => {
+  res.send("✅ App is deployed and home route is working!");
+});
