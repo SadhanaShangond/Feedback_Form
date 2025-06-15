@@ -35,7 +35,15 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}.....`);
 });
 
-userRouter.get("/", (req, res) => {
-  res.render("register");
+// Root route: renders a form that POSTs to /api/v1/users/register
+app.get("/", (req, res) => {
+  res.send(`
+    <h2>Register</h2>
+    <form action="/api/v1/users/register" method="POST">
+      <input name="username" placeholder="Username" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+  `);
 });
  

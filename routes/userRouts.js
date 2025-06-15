@@ -3,7 +3,7 @@ const {
   registerUser,
   loginUser,
   logoutUser,
-  showRegisterPage,
+  // showRegisterPage,
   showLoginrPage,
 } = require("../controllers/userController.js");
 
@@ -12,7 +12,7 @@ userRouter.post("/register", registerUser);
 userRouter.post("/login", loginUser);
 userRouter.get("/logout", logoutUser);
 
-
+// userRouter.get("/register", showRegisterPage);
 userRouter.get("/login", showLoginrPage);
 
 
