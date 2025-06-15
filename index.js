@@ -35,7 +35,7 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}.....`);
 });
 
-userRouter.get("/register", showRegisterPage);
-const showRegisterPage = (req, res) => {
+userRouter.get("/", (req, res) => {
   res.render("register");
-};
+});
+ 
