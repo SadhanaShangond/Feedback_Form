@@ -1,0 +1,132 @@
+/* Ensure padding and borders are included in width */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  padding: 3rem 1rem;
+  margin: 0;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #f5f5f5;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+
+form {
+  background: #1e1e1e;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* prevent overflow */
+}
+
+form:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+}
+
+label {
+  display: block;
+  margin-top: 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #bbbbbb;
+}
+
+input,
+textarea {
+  width: 100%; /* full width inside container */
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  border: 2px solid #333333;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #2c2c2c;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  resize: vertical; /* allow vertical resize only for textarea */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777777;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #8888ff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(136, 136, 255, 0.6);
+  background: #353535;
+}
+
+button {
+  background: linear-gradient(45deg, #5555ff, #2222aa);
+  color: #fff;
+  margin-top: 2rem;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(85, 85, 255, 0.4);
+  transition: background 0.4s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #4444dd, #111188);
+  transform: scale(1.05);
+}
+
+p, a, h1 {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #cccccc;
+  font-weight: 500;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 450px;
+  user-select: none;
+}
+
+a {
+  color: #9999ff;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #6666ff;
+  color: #f0f0ff;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+

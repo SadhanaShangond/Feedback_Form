@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Success
+    link(rel="stylesheet", href="/css/style.css")
+
+  body    
+   
+    form(method="GET", action="/api/v1/users/logout")
+      p Your feedback was successfully submitted.
+      a(href="/api/v1/protect/feedback") Submit more feedback
+      button(type="submit") Logout

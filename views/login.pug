@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Login
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Login
+    form(method="POST", action="login")
+      input(type="email", name="email", placeholder="Email", required)
+      input(type="password", name="password", placeholder="Password", required)
+      button(type="submit") Login
+    a(href="/api/v1/users/register") Don't have an account? Register

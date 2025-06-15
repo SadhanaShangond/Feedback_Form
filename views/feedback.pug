@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Feedback Form
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Submit Feedback
+
+    form(method="POST", action="feedback")
+      label(for="name")  Name:
+      input(type="text", id="name", name="name", placeholder="Enter your name", required)
+
+      label(for="course") Course Name:
+      input(type="text", id="course", name="course", placeholder="Enter course name", required)
+
+      label(for="instructor") Instructor Name:
+      input(type="text", id="instructor", name="instructor", placeholder="Enter instructor name", required)
+      
+      label(for="rating") Rating (1–5):
+      input(type="number", id="rating", name="rating", placeholder="Enter rating", min="1", max="5", required)
+
+      label(for="comments") Comments:
+      textarea(id="comments", name="comments", placeholder="Your comments here...", rows="4")
+
+      button(type="submit") Submit Feedback
+
+
+
+
+
