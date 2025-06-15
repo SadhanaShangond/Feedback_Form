@@ -6,9 +6,7 @@ dotenv.config({ path: "./.env" });
 
 
 //show pug form for registration
-const showRegisterPage = (req, res) => {
-  res.render("register");
-};
+
 
 //show pug form for login
 const showLoginrPage = (req, res) => {
