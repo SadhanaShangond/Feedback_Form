@@ -26,8 +26,8 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 //Routing midlleware
-app.use("/api/v1/users", userRouter);
-app.use("/api/v1/protect", router);
+app.use("/users", userRouter);
+app.use("/protect", router);
 
 const PORT = process.env.PORT || 7000;
 
