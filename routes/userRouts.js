@@ -3,7 +3,7 @@ const {
   registerUser,
   loginUser,
   logoutUser,
-  // showRegisterPage,
+  showRegisterPage,
   showLoginrPage,
 } = require("../controllers/userController.js");
 
