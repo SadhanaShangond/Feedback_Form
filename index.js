@@ -31,19 +31,15 @@ app.use("/api/v1/protect", router);
 
 const PORT = process.env.PORT || 7000;
 
+
+// Root route renders the register form using Pug
+app.get("/", (req, res) => {
+  res.render("register");
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}.....`);
 });
 
-// Root route: renders a form that POSTs to /api/v1/users/register
-// app.get("/", (req, res) => {
-//   res.send(`
-//     <h2>Register</h2>
-//     <form action="/api/v1/users/register" method="POST">
-//       <input name="username" placeholder="Username" required />
-//       <input type="password" name="password" placeholder="Password" required />
-//       <button type="submit">Register</button>
-//     </form>
-//   `);
-// });
- 
+
